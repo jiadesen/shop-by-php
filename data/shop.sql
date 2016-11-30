@@ -1,6 +1,6 @@
 CREATE DATABASE IF NOT EXISTS `shop`;
 USE `shop`;
---管理员表
+#管理员表
 DROP TABLE IF EXISTS `shop_admin`;
 CREATE TABLE `shop_admin`(
 `id` tinyint unsigned auto_increment key,
@@ -9,13 +9,13 @@ CREATE TABLE `shop_admin`(
 `email` varchar(50) not null
 );
 
---分类表
+#分类表
 DROP TABLE IF EXISTS `shop_cate`;
 CREATE TABLE `shop_cate`(
 `id` smallint unsigned auto_increment key,
 `cName` varchar(50) unique
 );
---商品表
+#商品表
 DROP TABLE IF EXISTS `shop_pro`;
 CREATE TABLE `shop_pro`(
 `id` int unsigned auto_increment key,
@@ -31,7 +31,7 @@ CREATE TABLE `shop_pro`(
 `isHot` tinyint(1) default 0,
 `cId` smallint unsigned not null
 );
---用户表
+#用户表
 DROP TABLE IF EXISTS`shop_user`;
 CREATE TABLE `shop_user`(
 `id` int unsigned auto_increment key,
@@ -42,7 +42,7 @@ CREATE TABLE `shop_user`(
 `regTime` int unsigned not null
 );
 
---相册表
+#相册表
 DROP TABLE IF EXISTS `shop_album`;
 CREATE TABLE `shop_album`(
 `id` int unsigned auto_increment key,
